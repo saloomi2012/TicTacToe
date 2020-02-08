@@ -73,6 +73,12 @@ void Game::input() {
 
                 }
                 break;
+            case sf::Event::KeyPressed:
+                if(e.key.code == sf::Keyboard::R) {
+                    reset();
+                }
+                break;
+
 
         }
     }
@@ -299,4 +305,14 @@ bool Game::boardFull() {
     }
 
     return true;
+}
+
+void Game::reset() {
+    xshape = true;
+    run = true;
+    won = false;
+    stalemate = false;
+
+    for(int& i: squares)
+        i = 0;
 }

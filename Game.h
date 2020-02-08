@@ -52,6 +52,8 @@ public:
     void checkWin();
 
     bool boardFull();
+
+    void reset();
 };
 
 
